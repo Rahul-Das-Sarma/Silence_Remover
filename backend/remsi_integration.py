@@ -39,9 +39,9 @@ class RemsiProcessor:
             
             result = subprocess.run(
                 cmd,
-                capture_output=True,
-                text=True,
-                stderr=subprocess.STDOUT
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+                text=True
             )
             
             # Parse the output to extract silence segments

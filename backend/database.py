@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Database URL from environment variable
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://user:password@localhost/silence_remover")
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./silence_remover.db")
 
 # Create engine
 engine = create_engine(DATABASE_URL)
